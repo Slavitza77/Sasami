@@ -1,0 +1,1174 @@
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+
+  --pink: #d94f7c;
+  --pink-dark: #b93a63;
+
+  --ink: #141414;
+
+  --paper: #fffaf9;
+
+  --line: #f0dfe6;
+
+  --whatsapp: #22a35c;
+
+  --lavender: #c9b6e4;
+  --mint: #b7e4c7;
+  --peach: #f7cfa0;
+
+}
+
+
+/* =========================================================
+   CONFIGURACION GENERAL
+========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+
+  margin: 0;
+
+  background: var(--paper);
+
+  color: var(--ink);
+
+  font-family:
+    'Work Sans',
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+
+}
+
+
+h1,
+h2,
+.navbar-brand,
+.hero__title,
+.footer__brand {
+
+  font-family: 'Baloo 2', sans-serif;
+
+}
+
+
+a {
+
+  text-decoration: none;
+
+  color: inherit;
+
+}
+
+
+:focus-visible {
+
+  outline: 3px solid var(--pink);
+
+  outline-offset: 2px;
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+
+    animation: none !important;
+
+    transition: none !important;
+
+  }
+
+}
+
+
+/* =========================================================
+   SPRITE SVG
+========================================================= */
+
+.sprite {
+
+  position: absolute;
+
+  width: 0;
+
+  height: 0;
+
+  overflow: hidden;
+
+}
+
+
+/* =========================================================
+   BOTONES
+========================================================= */
+
+.btn-pink {
+
+  background: var(--pink);
+
+  border-color: var(--pink);
+
+  color: #fff;
+
+  font-weight: 700;
+
+}
+
+
+.btn-pink:hover {
+
+  background: var(--pink-dark);
+
+  border-color: var(--pink-dark);
+
+  color: #fff;
+
+}
+
+
+.btn-whatsapp {
+
+  background: var(--whatsapp);
+
+  border-color: var(--whatsapp);
+
+  color: #fff;
+
+  font-weight: 700;
+
+}
+
+
+.btn-whatsapp:hover {
+
+  background: #1c8a4c;
+
+  border-color: #1c8a4c;
+
+  color: #fff;
+
+}
+
+
+/* =========================================================
+   ICONO SOCIAL (NAVBAR)
+========================================================= */
+
+.social-icon {
+
+  width: 36px;
+
+  height: 36px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, .08);
+
+  color: #fff;
+
+  transition:
+    background .15s,
+    color .15s,
+    transform .15s;
+
+}
+
+
+.social-icon:hover {
+
+  background: var(--pink);
+
+  color: #fff;
+
+  transform: translateY(-1px);
+
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar-brand {
+
+  font-size: 1.4rem;
+
+  font-weight: 800;
+
+  letter-spacing: .04em;
+
+  color: #fff;
+
+}
+
+
+.cat-nav a {
+
+  color: #d8d8d8;
+
+  font-weight: 600;
+
+  font-size: .92rem;
+
+  padding: 6px 4px;
+
+  border-bottom: 2px solid transparent;
+
+}
+
+
+.cat-nav a:hover,
+.cat-nav a.is-active {
+
+  color: #fff;
+
+  border-color: var(--pink);
+
+}
+
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+
+.breadcrumb-bar {
+
+  background: #fff;
+
+  border-bottom: 1px solid var(--line);
+
+}
+
+
+.breadcrumb-bar .breadcrumb {
+
+  margin: 0;
+
+  padding: 12px 0;
+
+  font-size: .88rem;
+
+}
+
+
+.breadcrumb-bar a {
+
+  color: #8a6673;
+
+  font-weight: 600;
+
+}
+
+
+.breadcrumb-bar a:hover {
+
+  color: var(--pink-dark);
+
+}
+
+
+.breadcrumb-bar .breadcrumb-item.active {
+
+  color: var(--ink);
+
+  font-weight: 600;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+  background:
+    linear-gradient(
+      135deg,
+      #fbe4ef 0%,
+      #f4e6f7 55%,
+      #fdf3e4 100%
+    );
+
+}
+
+
+.hero__badge {
+
+  display: inline-block;
+
+  background: var(--pink);
+
+  color: #fff;
+
+  font-weight: 700;
+
+  font-size: .82rem;
+
+  padding: 8px 16px;
+
+  border-radius: 999px;
+
+  margin-bottom: 16px;
+
+}
+
+
+.hero__title {
+
+  font-size: clamp(2.4rem, 5.6vw, 3.6rem);
+
+  line-height: 1.08;
+
+  font-weight: 800;
+
+  margin: 0 0 18px;
+
+}
+
+
+.hero__lede {
+
+  font-size: 1.05rem;
+
+  color: #4a4348;
+
+  max-width: 48ch;
+
+  line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   IMAGEN PRINCIPAL HERO
+========================================================= */
+
+.hero__art {
+
+  aspect-ratio: 1 / 1;
+
+  border-radius: 28px;
+
+  overflow: hidden;
+
+  /* Fondo transparente: si tu logo/imagen es un PNG con
+     transparencia, aqui ya no se vera la caja blanca */
+  background: transparent;
+
+  display: grid;
+
+  place-items: center;
+
+}
+
+
+.hero__art img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
+
+  transition: transform .3s ease;
+
+}
+
+
+.hero__art:hover img {
+
+  transform: scale(1.03);
+
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.features {
+
+  padding: 48px 0;
+
+  background: #fff;
+
+}
+
+
+.feature__icon {
+
+  font-size: 1.8rem;
+
+  display: block;
+
+  margin-bottom: 8px;
+
+}
+
+
+.feature__title {
+
+  font-weight: 700;
+
+  margin: 0;
+
+}
+
+
+.feature__desc {
+
+  color: #6b6469;
+
+  font-size: .9rem;
+
+  margin: 4px 0 0;
+
+}
+
+
+/* =========================================================
+   QUIENES SOMOS
+========================================================= */
+
+.quienes {
+
+  padding: 56px 0;
+
+  background: var(--paper);
+
+}
+
+
+.section-title {
+
+  font-size: 1.9rem;
+
+  font-weight: 700;
+
+  margin-bottom: 16px;
+
+}
+
+
+.quienes__text {
+
+  color: #4a4348;
+
+  line-height: 1.7;
+
+  margin-bottom: 14px;
+
+}
+
+
+.quienes__art {
+
+  aspect-ratio: 4 / 3;
+
+  border-radius: 24px;
+
+  background: #f4e6f7;
+
+  display: grid;
+
+  place-items: center;
+
+  overflow: hidden;
+
+}
+
+
+.quienes__art img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: transform .3s ease;
+
+}
+
+
+.quienes__art:hover img {
+
+  transform: scale(1.03);
+
+}
+
+
+/* =========================================================
+   EXPLORA POR ESTILO
+========================================================= */
+
+.explora {
+
+  padding: 16px 0 56px;
+
+  background: #fff;
+
+}
+
+
+.style-tile {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 10px;
+
+  background: var(--tile, #eee);
+
+  border-radius: 20px;
+
+  padding: 28px 12px;
+
+  color: var(--ink);
+
+  font-weight: 700;
+
+  transition:
+    transform .15s,
+    box-shadow .15s;
+
+}
+
+
+.style-tile:hover {
+
+  transform: translateY(-3px);
+
+  color: var(--ink);
+
+}
+
+
+/* =========================================================
+   TARJETAS DE CATEGORIA CON IMAGEN
+========================================================= */
+
+.style-tile--image {
+
+  position: relative;
+
+  min-height: 220px;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  color: #fff;
+
+  justify-content: flex-end;
+
+  background: #ddd;
+
+}
+
+
+.style-tile--image img {
+
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform .3s ease;
+
+}
+
+
+.style-tile--image::after {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      transparent 35%,
+      rgba(0, 0, 0, .72)
+    );
+
+}
+
+
+.style-tile--image span {
+
+  position: relative;
+
+  z-index: 2;
+
+  font-size: 1.1rem;
+
+  padding: 18px;
+
+  color: #fff;
+
+}
+
+
+.style-tile--image:hover img {
+
+  transform: scale(1.06);
+
+}
+
+
+/* =========================================================
+   BANDA DE CATEGORIA
+========================================================= */
+
+.cat-band {
+
+  background:
+    linear-gradient(
+      120deg,
+      #fbe4ef,
+      #f4e6f7
+    );
+
+}
+
+
+.cat-band--dark {
+
+  background:
+    linear-gradient(
+      120deg,
+      #1c1c1c,
+      #3a2b33
+    );
+
+  color: #fff;
+
+}
+
+
+.cat-band__title {
+
+  font-weight: 800;
+
+  font-size: 2rem;
+
+  margin: 0;
+
+}
+
+
+.cat-band__lede {
+
+  margin: 6px 0 0;
+
+  opacity: .85;
+
+}
+
+
+/* =========================================================
+   TARJETAS DE PRODUCTO
+========================================================= */
+
+.product-card {
+
+  border: 1px solid var(--line);
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  background: #fff;
+
+  height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  transition:
+    box-shadow .15s,
+    transform .15s;
+
+}
+
+
+.product-card:hover {
+
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, .08);
+
+  transform: translateY(-2px);
+
+}
+
+
+.card-thumb {
+
+  background: #faf1f4;
+
+  color: var(--pink-dark);
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+}
+
+
+.card-thumb img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: transform .3s ease;
+
+}
+
+
+.product-card:hover .card-thumb img {
+
+  transform: scale(1.04);
+
+}
+
+
+/* Icono de respaldo cuando la foto real todavia no existe */
+
+.card-thumb .fallback-icon,
+.detail-thumb .fallback-icon {
+
+  width: 46%;
+
+  height: 46%;
+
+  opacity: .35;
+
+}
+
+
+.card-tag {
+
+  position: absolute;
+
+  top: 10px;
+
+  left: 10px;
+
+  z-index: 3;
+
+  background: var(--ink);
+
+  color: #fff;
+
+  font-size: .66rem;
+
+  font-weight: 700;
+
+  padding: 4px 10px;
+
+  border-radius: 999px;
+
+}
+
+
+.card-tag--segunda {
+
+  background: var(--mint);
+
+  color: #155724;
+
+}
+
+
+.card-tag--importacion {
+
+  background: var(--peach);
+
+  color: #7a4a12;
+
+}
+
+
+.card-body {
+
+  padding: 14px;
+
+}
+
+
+.card-name {
+
+  font-size: 1rem;
+
+  font-weight: 700;
+
+  margin: 0 0 6px;
+
+}
+
+
+.card-price {
+
+  font-weight: 800;
+
+  font-size: 1.05rem;
+
+  margin: 0 0 10px;
+
+}
+
+
+/* =========================================================
+   PAGINA DE PRODUCTO
+========================================================= */
+
+.detail-thumb {
+
+  background: #faf1f4;
+
+  color: var(--pink-dark);
+
+  position: relative;
+
+  border-radius: 16px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+}
+
+
+.detail-thumb img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+}
+
+
+.detail-detalles {
+
+  list-style: none;
+
+  padding: 0;
+
+  margin: 0 0 18px;
+
+  font-size: .92rem;
+
+  color: #4a4348;
+
+}
+
+
+.detail-detalles li {
+
+  margin-bottom: 6px;
+
+}
+
+
+/* =========================================================
+   COLORES
+========================================================= */
+
+.swatch {
+
+  width: 32px;
+
+  height: 32px;
+
+  border-radius: 50%;
+
+  border: 2px solid #fff;
+
+  outline: 1px solid var(--line);
+
+  cursor: pointer;
+
+}
+
+
+.swatch.is-active {
+
+  outline: 2px solid var(--ink);
+
+  outline-offset: 2px;
+
+}
+
+
+/* =========================================================
+   TALLAS
+========================================================= */
+
+.size-btn {
+
+  min-width: 48px;
+
+  padding: 8px 0;
+
+  border: 1px solid #ccc;
+
+  border-radius: 8px;
+
+  background: #fff;
+
+  font-weight: 600;
+
+  font-size: .85rem;
+
+}
+
+
+.size-btn.is-active {
+
+  border-color: var(--pink);
+
+  background: var(--pink);
+
+  color: #fff;
+
+}
+
+
+/* =========================================================
+   RELATED
+========================================================= */
+
+.related-card {
+
+  display: block;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+
+  background: var(--ink);
+
+  color: #c9c3c6;
+
+  padding: 48px 0 32px;
+
+}
+
+
+.footer a {
+
+  display: block;
+
+  color: #c9c3c6;
+
+  padding: 3px 0;
+
+  font-size: .92rem;
+
+}
+
+
+.footer a:hover {
+
+  color: #fff;
+
+}
+
+
+.footer__brand {
+
+  font-size: 1.3rem;
+
+  font-weight: 800;
+
+  color: #fff;
+
+  margin: 0;
+
+}
+
+
+.footer__tag {
+
+  font-size: .88rem;
+
+  margin: 6px 0 0;
+
+}
+
+
+.footer__head {
+
+  font-weight: 700;
+
+  color: #fff;
+
+  margin-bottom: 8px;
+
+}
+
+
+.footer__social {
+
+  flex-wrap: wrap;
+
+}
+
+
+.footer__social a {
+
+  display: inline;
+
+  padding: 0;
+
+}
+
+
+/* =========================================================
+   WHATSAPP FLOTANTE
+========================================================= */
+
+.fab-whatsapp {
+
+  position: fixed;
+
+  right: 20px;
+
+  bottom: 20px;
+
+  z-index: 60;
+
+  width: 56px;
+
+  height: 56px;
+
+  border-radius: 50%;
+
+  background: var(--whatsapp);
+
+  color: #fff;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, .25);
+
+  transition: transform .15s;
+
+}
+
+
+.fab-whatsapp:hover {
+
+  transform: scale(1.06);
+
+  color: #fff;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 576px) {
+
+  .cat-nav {
+
+    order: 3;
+
+    width: 100%;
+
+    justify-content: space-between;
+
+  }
+
+
+  .hero__title {
+
+    font-size: 2.5rem;
+
+  }
+
+
+  .style-tile--image {
+
+    min-height: 180px;
+
+  }
+
+
+  .fab-whatsapp {
+
+    right: 15px;
+
+    bottom: 15px;
+
+  }
+
+}
